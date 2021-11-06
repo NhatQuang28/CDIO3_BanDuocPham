@@ -1,0 +1,48 @@
+﻿
+@using CDIO3_BanDuocPham.Models;
+@model IEnumerable<SANPHAM>
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 top_brand_left">
+            <div class="hover14 column">
+                <div class="agile_top_brand_left_grid">
+                    <div class="agile_top_brand_left_grid_pos">
+                    </div>
+                    <div class="agile_top_brand_left_grid1">
+                        <figure>
+                            <div class="snipcart-item block">
+                                <div class="snipcart-thumb">
+                                    <a href="@Url.Action("detailproduct", "Product", new { @MaSP = item.IDSP })"><img title=" " alt=" " src="@Url.Content("~/Public/images/"+item.HINHANH)" /></a>
+                                    <p>@item.TENSP</p>
+                                    <div class="stars">
+                                        <i class="fa fa-star blue-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star blue-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star blue-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star blue-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star gray-star" aria-hidden="true"></i>
+                                    </div>
+                                    <h4>@item.DONGIA vnd</h4>
+                                </div>
+                                <div class="snipcart-details top_brand_home_details">
+                                    <form action="#" method="post">
+                                        <fieldset>
+                                            <input type="hidden" name="cmd" value="_cart" />
+                                            <input type="hidden" name="add" value="@item.IDSP" />
+                                            <input type="hidden" name="business" value=" " />
+                                            <input type="hidden" name="item_name" value="@item.TENSP" />
+                                            <input type="hidden" name="amount" value="@item.DONGIA" />
+                                            <input type="hidden" name="discount_amount" value="" />
+                                            <input type="hidden" name="currency_code" value="VND" />
+                                            <input type="hidden" name="return" value=" " />
+                                            <input type="hidden" name="cancel_return" value=" " />
+                                            <input type="submit" name="submit" value="Thêm giỏ hàng" class="button" />
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }

@@ -1,0 +1,148 @@
+﻿@using CDIO3_BanDuocPham.Models;
+@model IEnumerable<SANPHAM>
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/_LayoutProduct.cshtml";
+}
+
+<!-- breadcrumbs -->
+<div class="breadcrumbs">
+    <div class="container">
+        <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+            <li><a href="@Url.Action("Index","Site")"><span class="fa fa-home" aria-hidden="true"></span>Trang chủ</a></li>
+            <li class="active">Sản phẩm</li>
+        </ol>
+    </div>
+</div>
+<!-- //breadcrumbs -->
+<!--- products --->
+<div class="products">
+    <div class="container">
+        <div class="col-md-4 products-left">
+            <div class="categories">
+                <h2>Categories</h2>
+                <ul class="cate">
+                    <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Thuốc không kê đơn</a></li>
+                    <ul>
+                        <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Thuốc kháng dị ứng</a></li>
+                        <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Thuốc kháng viêm</a></li>
+                        <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Thuốc cảm lạnh,ho</a></li>
+                        <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Thuốc ngừa thai</a> </li>
+                        <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Thuốc da liễu</a> </li>
+                        <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Thuốc tiêu hóa</a></li>
+                    </ul>
+                    <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Thực phẩm chức năng</a></li>
+                    <ul>
+                        <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Nhóm tiêu hóa</a> </li>
+                        <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Nhóm hô hấp</a> </li>
+                        <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Nhóm thần kinh</a> </li>
+                        <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Nhóm sinh lý nam nữ</a> </li>
+                        <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Dành cho trẻ em</a> </li>
+                    </ul>
+                    <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Chăm sóc sức khỏe</a></li>
+                    <ul>
+                        <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Khẩu trang</a> </li>
+                        <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Thiết bị y tế</a> </li>
+                        <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Dụng cụ sơ cứu</a> </li>
+                        <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Kế hoạch gia đình</a> </li>
+                        <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Chống muỗi</a> </li>
+                        <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Dầu xoa bóp</a></li>
+                    </ul>
+                    <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Chăm sóc cá nhân</a></li>
+                    <ul>
+                        <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Chăm sóc em bé</a> </li>
+                        <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Chăm sóc tóc</a> </li>
+                        <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Chăm sóc cơ thế</a> </li>
+                        <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Sản phẩm khử mùi</a> </li>
+                        <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Vệ sinh phụ nữ</a> </li>
+                        <li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Chăm sóc răng miệng</a> </li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-8 products-right">
+            <div class="products-right-grid">
+                <div class="products-right-grids">
+                    <div class="sorting">
+                        <select id="country" onchange="change_country(this.value)" class="frm-field required sect">
+                            <option value="null"><i class="fa fa-arrow-right" aria-hidden="true"></i>Default sorting</option>
+                            <option value="null"><i class="fa fa-arrow-right" aria-hidden="true"></i>Sort by popularity</option>
+                            <option value="null"><i class="fa fa-arrow-right" aria-hidden="true"></i>Sort by average rating</option>
+                            <option value="null"><i class="fa fa-arrow-right" aria-hidden="true"></i>Sort by price</option>
+                        </select>
+                    </div>
+                    <div class="sorting-left">
+                        <select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
+                            <option value="null"><i class="fa fa-arrow-right" aria-hidden="true"></i>Item on page 9</option>
+                            <option value="null"><i class="fa fa-arrow-right" aria-hidden="true"></i>Item on page 18</option>
+                            <option value="null"><i class="fa fa-arrow-right" aria-hidden="true"></i>Item on page 32</option>
+                            <option value="null"><i class="fa fa-arrow-right" aria-hidden="true"></i>All</option>
+                        </select>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <div class="agile_top_brands_grids">
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-4 top_brand_left">
+                        <div class="hover14 column">
+                            <div class="agile_top_brand_left_grid">
+                                <div class="agile_top_brand_left_grid1">
+                                    <figure>
+                                        <div class="snipcart-item block">
+                                            <div class="snipcart-item">
+                                                <a href="@Url.Action("detailproduct", "Product", new { @MaSP = item.IDSP })"><img title=" " alt="" src="@Url.Content("~/Public/images/"+item.HINHANH)" width="150px" height="150px"></a>
+                                                <p style="height:50px; width:150px">@item.TENSP</p>
+                                                <h4>@item.DONGIA vnd</h4>
+                                            </div>
+                                            <div class="snipcart-details top_brand_home_details">
+                                                <form action="#" method="post">
+                                                    <fieldset>
+                                                        <input type="hidden" name="cmd" value="_cart" />
+                                                        <input type="hidden" name="add" value="@item.IDSP" />
+                                                        <input type="hidden" name="business" value=" " />
+                                                        <input type="hidden" name="item_name" value="@item.TENSP" />
+                                                        <input type="hidden" name="amount" value="@item.DONGIA" />
+                                                        <input type="hidden" name="discount_amount" value="" />
+                                                        <input type="hidden" name="currency_code" value="VND" />
+                                                        <input type="hidden" name="return" value=" " />
+                                                        <input type="hidden" name="cancel_return" value=" " />
+                                                        <input type="submit" name="submit" value="Thêm giỏ hàng" class="button" />
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                <div class="clearfix"> </div>
+            </div>
+
+            <nav class="numbering">
+                <ul class="pagination paging">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="active"><a href="#">1<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!--- products --->

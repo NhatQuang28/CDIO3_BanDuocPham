@@ -1,0 +1,108 @@
+﻿@using CDIO3_BanDuocPham.Models
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutSite.cshtml";
+}
+@{ IEnumerable<SANPHAM> lstSP1 = (IEnumerable<SANPHAM>)ViewBag.listSP1;
+    IEnumerable<SANPHAM> lstSP2 = (IEnumerable<SANPHAM>)ViewBag.listSP2;}
+<!-- new -->
+<!-- main-slider -->
+<ul id="demo1">
+    <li>
+        <img src="~/Public/images/240_F_283012325_5o6vMeY4uf7ck6F9QTEGG1IqjtjzbN9X.jpg" />
+        <!--Slider Description example-->
+        <div class="slide-desc">
+            <h3 style="color:#3399cc">Sản Phẩm Chất Lượng Cao</h3>
+        </div>
+    </li>
+    <li>
+        <img src="~/Public/images/pills-capsules-different-colors-fly-out-glass-jar-pale-blue-background-wide-format-banner_305638-240.jpg" />
+        <div class="slide-desc">
+            <h3 style="color: #3399cc">Khuyến mãi Lên Đến 70%</h3>
+        </div>
+    </li>
+
+    <li>
+        <img src="~/Public/images/portrait-doctor-hospital-he-folded-his-hands-shape-heart_392761-1570.jpg" />
+        <div class="slide-desc">
+            <h3 style="color: #3399cc">Giao Hàng Trong Vòng 24h</h3>
+        </div>
+    </li>
+</ul>
+<!-- //main-slider -->
+<div class="top-brands">
+    <div class="container">
+        <h2>Sản Phẩm Bán Chạy</h2>
+        <div class="agile_top_brands_grids ">
+            @Html.Partial("PartialProduct", lstSP1)
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!-- //new -->
+<!-- //top-brands -->
+<!-- Carousel
+   ================================================== -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <a href="#"> <img class="first-slide" src="~/Public/images/web-bann-vitabiotics-qua-trao-tay-1400x417.jpg" alt="First slide" width="1500px"></a>
+
+        </div>
+        <div class="item">
+            <a href="#"> <img class="second-slide " src="~/Public/images/vitamin-set-new-PMC-1400x417.jpg" alt="Second slide" width="1500px"></a>
+
+        </div>
+        <div class="item">
+            <a href="#"><img class="third-slide " src="~/Public/images/web-bann-vitabiotics-qua-trao-tay-1400x417.jpg" alt="Third slide" width="1500px"></a>
+
+        </div>
+    </div>
+
+</div><!-- /.carousel -->
+<!--banner-bottom-->
+<div class="ban-bottom-w3l">
+    <div class="container">
+        <div class="col-md-6 ban-bottom3">
+            <div class="ban-top">
+                <img src="~/Public/images/650X360-WEB-BAN-01.jpg" class="img-responsive" alt="" />
+
+            </div>
+            <div class="ban-img">
+                <div class=" ban-bottom1">
+                    <div class="ban-top">
+                        <img src="~/Public/images/650X360-WEB-BAN-03.jpg" class="img-responsive" alt="" />
+                    </div>
+                </div>
+                <div class="ban-bottom2">
+                    <div class="ban-top">
+                        <img src="~/Public/images/650X360-WEB-BAN-04.jpg" class="img-responsive" alt="" />
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="col-md-6 ban-bottom">
+            <div class="ban-top">
+                <img src="~/Public/images/650X360-WEB-BAN-02.jpg" class="img-responsive" alt="" />
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!--banner-bottom-->
+<!-- new -->
+<div class="newproducts-w3agile">
+    <div class="container">
+        <h3>Sản Phẩm Mới</h3>
+        @Html.Partial("PartialProduct", lstSP2)
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //new -->

@@ -1,0 +1,26 @@
+﻿@using CDIO3_BanDuocPham.Models;
+@model IEnumerable<LOAISANPHAM>
+
+<nav class="navbar navbar-default" id="mNavbar">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header nav_2">
+        <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="@Url.Action("Index","Site")" class="act">Trang Chủ</a></li>
+            <!-- Mega Menu -->
+            @foreach (var item in Model)
+            {
+               
+                <li><a href="@Url.Action("Product", "Product", new { @MaLoaiSP = item.IDLOAISP })">@item.TENLOAI</a></li>
+            }
+
+        </ul>
+    </div>
+</nav>

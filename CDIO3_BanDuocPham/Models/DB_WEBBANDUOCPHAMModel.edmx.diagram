@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="19cc687314ce40438636b9fb8fd18efa" Name="Diagram1" ZoomLevel="70">
+        <EntityTypeShape EntityType="DB_WEBBANDUOCPHAMModel.CHITIETDONHANG" Width="1.875" PointX="3.5" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WEBBANDUOCPHAMModel.DANHGIA" Width="1.5" PointX="6.625" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WEBBANDUOCPHAMModel.DONDATHANG" Width="1.625" PointX="7" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WEBBANDUOCPHAMModel.LOAISANPHAM" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WEBBANDUOCPHAMModel.NHACUNGCAP" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WEBBANDUOCPHAMModel.PHANQUYEN" Width="1.5" PointX="11.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WEBBANDUOCPHAMModel.SANPHAM" Width="1.5" PointX="3.625" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WEBBANDUOCPHAMModel.TAIKHOAN" Width="1.5" PointX="12" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WEBBANDUOCPHAMModel.THANHVIEN" Width="1.5" PointX="9.25" PointY="2.875" IsExpanded="true" />
+        <AssociationConnector Association="DB_WEBBANDUOCPHAMModel.CTDH_IDDDH_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_WEBBANDUOCPHAMModel.CTDH_IDSP_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_WEBBANDUOCPHAMModel.DG_IDSP_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_WEBBANDUOCPHAMModel.DG_IDTV_FK1" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_WEBBANDUOCPHAMModel.DDH_IDTV_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_WEBBANDUOCPHAMModel.SP_IDLOAISP_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_WEBBANDUOCPHAMModel.SP_IDNCC_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_WEBBANDUOCPHAMModel.TK_IDPQ_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_WEBBANDUOCPHAMModel.KH_IDTK_FK" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
